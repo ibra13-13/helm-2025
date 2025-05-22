@@ -1,0 +1,6 @@
+pod1_name: nginx
+pod2_name: wordpress
+pod1_image: nginx
+pod1_tag: "latest"
+pod2_image: wordpress
+pod2_tag: "kaizen"
