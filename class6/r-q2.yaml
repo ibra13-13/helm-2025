@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: example-quota
+  namespace: dev
+spec:
+  hard:
+    pods: "3"
+    deployments.apps/v1: "3"
+    replicasets.apps/v1: "5"
+    ingresses.extensions/v1beta1: "2"
+    services: "2"
+    secrets: "10"
+    configmaps: "10"
+    batch/v1: "5"
+    services.loadbalancers: "1"

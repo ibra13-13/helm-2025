@@ -5,11 +5,11 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      team: devops
+      team: qa
   policyTypes:
     - Ingress
   ingress:
     - from:
-      - namespaceSelector:
+        - podSelector:
             matchLabels:
-              dev: kube
+              team: devops

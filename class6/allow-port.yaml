@@ -1,15 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: test-network-policy-allow
+  name: test-network-policy-allow-port
 spec:
   podSelector:
     matchLabels:
-      team: devops
+      team: qa
   policyTypes:
     - Ingress
   ingress:
     - from:
-      - namespaceSelector:
+        - podSelector:
             matchLabels:
-              dev: kube
+              team: devops
+      ports:
+        - protocol: TCP
+          port: 80

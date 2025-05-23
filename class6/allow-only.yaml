@@ -5,11 +5,11 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      team: devops
+      app: redis3
   policyTypes:
     - Ingress
   ingress:
     - from:
-      - namespaceSelector:
+        - podSelector:
             matchLabels:
-              dev: kube
+              app: nginx2
