@@ -1,0 +1,9 @@
+apiVersion: myorg.com/v1
+kind: Database
+metadata:
+  name: kaizen
+spec:
+  engine: mysql
+  version: "8.0"
+  storageSize: "10Gi"
+  replicas: 1
